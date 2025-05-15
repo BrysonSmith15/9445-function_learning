@@ -9,7 +9,7 @@ def run_test(function: Callable, output, args) -> bool:
             out = function(args)
         if out != output:
             print(
-                f"\x1b[0;31mThe test failed with actual output {out} and desired output {output}\x1b[0m"
+                f"\x1b[0;31mThe test failed with actual output {out} and desired output {output}\n\twith inputs {args}\x1b[0m"
             )
             return False
         else:
